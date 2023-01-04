@@ -1,0 +1,36 @@
+{{!-- <div class="column is-one-third"> --}}
+{{log media}}
+{{!-- <div class="card-image">
+    <button id="upload_widget" class="cloudinary-button">
+        Upload files
+    </button>
+    
+    <!-- placeholder for uploaded image -->
+    <img id="uploadedimage" src="{{media}}">
+    </img>
+
+    <!-- cloudinary upload widget -->
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
+    </script>
+
+    <!-- local upload instantiation -->
+    <script src="/public/js/upload_widget.js" type="text/javascript">
+    </script>
+</div> --}}
+<div class="card-content custom-content">
+    <div class="media">
+        <div class="media-content">
+            <p class="title is-4 custom-txt">{{project.name}}</p>
+            <a href="/user/{{id}}" class="subtitle is-6">{{project.user.firstName}} {{project.user.lastName}}
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <p class="custom-txt">{{caption}}</p>
+        <p class="custom-txt">{{createdAt}}</p>
+        {{!-- <a>{{User.firstName}}, {{User.lastName}}</a>. --}}
+        {{!-- <a href="#">#interest1</a>
+        <a href="#">#interest2</a> --}}
+    </div>
+</div>

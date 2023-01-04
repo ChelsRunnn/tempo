@@ -1,6 +1,6 @@
-{{log profile.firstName}}
-<section class="columns custom-main-prof">
-  <aside class="custom-container column is-one-quarter"> 
+{{log profile.project.posts}}
+<section class="columns">
+  <aside class="custom-container column is-one-quarter">
    <div class="card">
     <div class="custom-content custom-about">
      <p id="custom-name">{{profile.firstName}} {{profile.lastName}}</p>
@@ -24,9 +24,9 @@
 
     <section class="timeline">
       <ul>
-        {{#each user.project.posts as |post|}}
+        {{#each profile.project.posts as |post|}}
           <li>
-            {{> post-details}}
+            {{> timeline-post}}
           </li>
         {{/each}}
         <li>
@@ -40,7 +40,8 @@
   {{/if}}
 </section>
 
-<script src="/public/js/upload_widget.js"></script>
-<script src="/public/js/modal.js"></script>
-<script src="/public/js/create_project.js"></script>
-<script src="/public/js/create_post"></script>
+<script src="./js/script.js"></script>
+<script src="./js/upload_widget.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/create_project.js"></script>
+<script src="./js/create_post.js"></script>

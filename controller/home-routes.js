@@ -41,11 +41,11 @@ router.get('/profile/:id', async (req, res) => {
             include: [
             {
                 model: Project,
-                attributes: [
-                    'id',
-                    'name',
-                    'description',
-                ],
+                include: [
+                    {
+                        model: Post
+                    }
+                ]
             },
             ],
         });
