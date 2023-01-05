@@ -6,9 +6,15 @@
      <p id="custom-name">{{profile.firstName}} {{profile.lastName}}</p>
      <img class="img-fluid" src="{{profile.profilePic}}https://media.istockphoto.com/id/1353524601/vector/metronome-icon-design-template-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=_CnfjE0Z5Ke2RrvALs9Tbg76RWH9vuklsCDQ0EEQD4A=">
      <p class="custom-txt">{{profile.bio}}</p>
-     <a href="/api/project-routes/" class="button custom-btn">New Project</a>
+     <a class="button custom-btn js-modal-trigger"
+        data-target="modal-project">
+        New Project
+      </a>
      {{!-- <button id="upload_widget" class="cloudinary-button">Upload files</button> --}}
-     <a href="/api/post-routes/" class="button custom-btn">New Post</a>
+     <a class="button custom-btn js-modal-trigger"
+        data-target="modal-post">
+        New Post
+      </a>
     </div>
    </div>
   </aside>
@@ -40,8 +46,59 @@
   {{/if}}
 </section>
 
-<script src="./js/script.js"></script>
-<script src="./js/upload_widget.js"></script>
-<script src="./js/modal.js"></script>
-<script src="./js/create_project.js"></script>
-<script src="./js/create_post.js"></script>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<div id="modal-project" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">New Project...</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Create Project</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<div id="modal-post" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">New Post...</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Post</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<script src="/js/script.js"></script>
+<script src="/js/upload_widget.js"></script>
+<script src="/js/modal.js"></script>
+<script src="/js/create_project.js"></script>
+<script src="/js/create_post.js"></script>
