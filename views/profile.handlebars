@@ -3,7 +3,7 @@
   <aside class="custom-container column is-one-quarter"> 
    <div class="card">
     <div class="custom-content custom-about">
-     <h4 class="widget-title">{{profile.firstName}} {{profile.lastName}}</h4>
+     <p id="custom-name">{{profile.firstName}} {{profile.lastName}}</p>
      <img class="img-fluid" src="{{profile.profilePic}}https://media.istockphoto.com/id/1353524601/vector/metronome-icon-design-template-vector-isolated-illustration.jpg?s=612x612&w=0&k=20&c=_CnfjE0Z5Ke2RrvALs9Tbg76RWH9vuklsCDQ0EEQD4A=">
      <p class="custom-txt">{{profile.bio}}</p>
      <a href="/api/project-routes/" class="button custom-btn">New Project</a>
@@ -14,7 +14,7 @@
   </aside>
 
  <section class="column is-three-quarters">
-   <section class="intro custom-container">
+   <section id="custom-title" class="intro custom-container">
   {{#if profile.project}}
       <div class="card">
         <div class="custom-content"
